@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>FlowDesQ</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/aos.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.css">
+
+</head>
+
+<style>
+  
+</style>
+
+<body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark nav-align fixed-top nav-custom">
+        <div class="container-fluid">
+            <a href="index.html"><img src="assets/img/logo.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <input type="checkbox" id="openSideMenu" class="openSideMenu d-none">
+                <label for="openSideMenu" class="menuIconToggle">
+                    <div class="hamb-line dia part-1"></div>
+                    <div class="hamb-line hor"></div>
+                    <div class="hamb-line dia part-2"></div>
+                </label>
+
+            </button>
+            <div class="nav-overlay"></div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav  navbar-nav-scroll  mx-auto  me-auto">
+                    <li class="nav-item ">
+                        <a class="nav-link  " aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="about.html">About Us</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link " href="features.html" tabindex="-1" aria-disabled="true">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="pricing.html" tabindex="-1" aria-disabled="true">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="demo.html" tabindex="-1" aria-disabled="true">Demo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="assets/img/zip/FlowDesQ-1.0.7.exe" download="" tabindex="-1"
+                            aria-disabled="true">Download</a>
+                    </li>
+                </ul>
+                <div class="nav-btn">
+                    <a href="#" class="common-ptn " role="button">
+                        <button class="primary-btn">
+                            Enquire Now
+                        </button>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="banner ">
+        <div class="container">
+            <div class="custom-container2 ">
+                <div class="row d-flex align-items-center" style="height: 100%;">
+                    <div class="col-lg-6" data-aos="fade-right">
+                        <div class="banner-cntnt p-0">
+                            <h3><span>Experience hands-on demo </span>
+                                and dive into all the tools
+                                before you decide. </h3>
+
+                            <button class="flowdesq-btn"> Explore Flowdesq
+                            </button>
+                            <div class="banner-counter counter-section">
+                                <div class="counter-div">
+                                    <h4>Active <br> <span>Users</span></h4>
+                                    <h2 class="counter" data-target="500">0</h2>
+                                </div>
+
+                                <div class="counter-div">
+                                    <h4>Total<br> <span>Download</span></h4>
+                                    <h2 class="counter" data-target="100">0</h2>
+                                </div>
+
+                                <div class="counter-div">
+                                    <h4>No. Of<br> <span>Customers</span></h4>
+                                    <h2 class="counter" data-target="500">0</h2>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="col-lg-6" data-aos="fade-left">
+                        <div class="banner-img">
+                            <div class="banner-form">
+                                <h4>Enquire Now</h4>
+
+                                <div class="firm-div">
+                                    <form name="RegForm" id="regForm">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="input-group">
+                                                    <input type="text" name="Name"  class="input"
+                                                        id="name">
+                                                    <label class="user-label">First Name</label>
+                                                    <div id="name-error" class="error-message"></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-6">
+                                                <div class="input-group">
+                                                    <input type="text" name="lastName"  class="input"
+                                                        id="lastName">
+                                                    <label class="user-label" for="lastName">Last Name</label>
+                                                    <div id="lastName-error" class="error-message"></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-12">
+                                                <div class="input-group">
+                                                    <input type="email" name="email"  class="input"
+                                                        id="email">
+                                                    <label class="user-label" for="email">Email</label>
+                                                    <div id="email-error" class="error-message"></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-12">
+                                                <div class="input-group">
+                                                    <input type="tel" name="mobile"  class="input"
+                                                        id="mobile">
+                                                    <label class="user-label" for="mobile">Mobile</label>
+                                                    <div id="mobile-error" class="error-message"></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-12">
+                                                <div class="input-group">
+                                                    <textarea name="message" id="message" class="input"></textarea>
+                                                    <label class="user-label" for="message">Enter Message</label>
+                                                    <div id="message-error" class="error-message"></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-12">
+                                                <div>
+                                                    <button type="submit" class="primary-btn">Submit</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+
+
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="common-space">
+        <div class="container">
+            <div class="row gx-lg-5 flow-video-sec justify-content-between align-items-center">
+
+                <div class="col-lg-5">
+                    <div class="flow-video-cont flow-video-cont2">
+                        <h4>Augment To a Smarter Workforce </h4>
+                        <p class="main-para">FlowDesq is an advanced Employee Monitoring & Productivity Management
+                            Solution designed for modern businesses. Structured to track performance, real-time
+                            insights, and integrations with ease, it optimizes workforce efficiency and operations. </p>
+                        <h5>New Here? Our Intro Video Shows
+                            You Everything You Need To Know. </h5>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="zoom-in-up" data-aos-duration="1000">
+                    <div class="flow-video flow-video2">
+                        <video controls autoplay muted loop playsinline>
+                            <source src="assets/video/intro.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <!-- <div class="custom-play-button">▶</div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="common-space">
+        <div class="container">
+            <div class="booking-sec">
+                <div class="pattern-1">
+                    <img src="assets/img/icons/Pattern.svg" alt="">
+                </div>
+                <div class="pattern-2">
+                    <img src="assets/img/icons/Pattern.svg" alt="">
+                </div>
+                <div class="booking-sec-cont">
+                    <span>Let’s Talk – Book a 1:1 Chat </span>
+                    <h4>Book a session with our product expert to explore how FlowDesQ can align with <br>
+                        your team's specific needs. </h4>
+                </div>
+
+                <div class="row justify-content-center g-md-5 g-3">
+                    <div class=" col-lg-5 col-md-6" data-aos="fade-down-right" data-aos-duration="800">
+                        <div class="book-card">
+                            <div class="b-card-img"><img src="assets/img/icons/b1.gif" alt=""></div>
+                            <h5>Quick form fill</h5>
+                            <p class="main-para"> Just a few company details to get
+                                started.</p>
+                            <button>Learn More</button>
+                        </div>
+                    </div>
+                    <div class=" col-lg-5 col-md-6" data-aos="fade-down-left" data-aos-duration="800">
+                        <div class="book-card">
+                            <div class="b-card-img"><img src="assets/img/icons/b2.gif" alt=""></div>
+                            <h5>Book your call</h5>
+                            <p class="main-para"> Pick a time that works best for you.</p>
+                            <button>Learn More</button>
+                        </div>
+                    </div>
+                    <div class=" col-lg-5 col-md-6" data-aos="fade-up-right" data-aos-duration="800">
+                        <div class="book-card">
+                            <div class="b-card-img"><img src="assets/img/icons/b3.gif" alt=""></div>
+                            <h5>Help us prep</h5>
+                            <p class="main-para"> Answer a couple of questions so we
+                                come ready with answers. </p>
+                            <button>Learn More</button>
+                        </div>
+                    </div>
+                    <div class=" col-lg-5 col-md-6" data-aos="fade-up-left" data-aos-duration="800">
+                        <div class="book-card">
+                            <div class="b-card-img"><img src="assets/img/icons/b4.gif" alt=""></div>
+                            <h5>That’s it!</h5>
+                            <p class="main-para">You’re booked—get ready for a
+                                productive session.</p>
+                            <button>Learn More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="common-space">
+        <div class="demo-abt-sec">
+            <div class="container">
+                <div class="demo-abt-cont" data-aos="fade-up" data-aos-duration="1000">
+                    <h4>Discover smarter workforce productivity with FlowDesQ </h4>
+                    <button class="secodary-btn">GET STARTED</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <button class="rounded-circle position-fixed bottom-0 end-0 translate-middle d-none border-none bg-none top-btn"
+        onclick="scrollToTop()" id="back-to-up">
+        <img class="top-arrow " src="assets/img/icons/arrow-top.png" alt="" srcset="">
+    </button>
+    
+    <section class="footer-sec">
+        <div class="container">
+            <div class="footer">
+                <div class="row gx-lg-5">
+                    <div class=" col-xl-4 col-lg-6">
+                        <div class="footer-cont">
+                            <div class="video-logo">
+                                <img src="assets/img/logo.png" alt="">
+                            </div>
+                            <h6 class="main-para">A Smarter Approach for simplified Employee Management </h6>
+                            <div class="social-links">
+                                <i class="fa-solid fa-envelope"></i>
+                                <span>veuz.in</span>
+                            </div>
+                            <div class="social-links">
+                                <i class="fa-solid fa-phone"></i>
+                                <span>548 574 3679 42</span>
+                            </div>
+                            <ul>
+                                <li><a href=""><i class="fa-brands fa-google"></i></a></li>
+                                <li><a href=""><i class="fa-brands fa-x-twitter"></i></a></li>
+                                <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                                <li><a href=""><i class="fa-brands fa-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6">
+                        <div class="row justify-content-center">
+                            <div class="col-sm-4 ">
+                                <div class="footer-list">
+                                    <h3>Home</h3>
+                                    <ul>
+                                        <li><a href="">Features</a></li>
+                                        <li><a href="">Pricing</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="footer-list">
+                                    <h3>Pages</h3>
+                                    <ul>
+                                        <li><a href="">Blogs</a></li>
+                                        <li><a href="">Videos</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="footer-list">
+                                    <h3>Address</h3>
+                                    <ul>
+                                        <li><a href="">lorem Ipsum</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6">
+                        <div class="footer-form">
+                            <h5>Get the latest news from us..!</h5>
+                            <div class="footer-form-cont">
+                                <input placeholder="Your email address…" type="email" class="form-control "
+                                    id="exampleInputEmail1" aria-describedby="emailHelp">
+                                <button class="primary-btn">Subscribe</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="copy-right-sec">
+            <div class="container">
+                <div class="copy-right-cont">
+                    <h6>© FlowDesQ 2025. All right reserved</h6>
+                    <div class="copy-right-list">
+                        <a href="">Terms & Conditions </a>
+                        <a href="">Privacy Policy </a>
+                        <a href="">Accessibility</a>
+                        <a href="">Legal</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="assets/js/aos.js"></script>
+    <script src="assets/js/gsap.min.js"></script>
+    <script src="assets/js/lenis.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.js"></script>
+    <script src="assets/js/font-awsome.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/ScrollTrigger.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+
+    <!-- <script>
+        $(document).ready(function () {
+            const button = document.querySelector(".navbar-toggler");
+            const navOverlay = document.querySelector(".nav-overlay");
+            const navbarCollapse = document.querySelector(".navbar-collapse");
+
+            button.addEventListener("click", function () {
+                navOverlay.classList.toggle("active");
+            });
+
+            navOverlay.addEventListener("click", function (event) {
+                if (event.target === navOverlay) {
+                    navOverlay.classList.remove("active");
+                    navbarCollapse.classList.remove("show");
+                }
+            });
+        });
+    </script> -->
+
+    <!-- <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const navbar = document.querySelector('.navbar');
+
+            window.addEventListener('scroll', function () {
+                if (window.scrollY > 50) { // Change 50 to the scroll threshold you prefer
+                    navbar.classList.add('navbar-scrolled');
+                } else {
+                    navbar.classList.remove('navbar-scrolled');
+                }
+            });
+        });
+    </script> -->
+
+    <!-- 
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const video = document.querySelector('.flow-video video');
+            const playButton = document.querySelector('.custom-play-button');
+
+            // Hide custom play button when video is playing
+            video.addEventListener('play', function () {
+                playButton.style.display = 'none';
+            });
+
+            // Show custom play button when video is paused
+            video.addEventListener('pause', function () {
+                playButton.style.display = 'flex';
+            });
+
+            // Clicking on video toggles play/pause
+            video.addEventListener('click', function () {
+                if (video.paused) {
+                    video.play();
+                } else {
+                    video.pause();
+                }
+            });
+
+            // Autoplay with mute (required by many browsers)
+            video.muted = true;
+            const playPromise = video.play();
+
+            if (playPromise !== undefined) {
+                playPromise.catch(error => {
+                    // Auto-play was prevented
+                    playButton.style.display = 'flex';
+                });
+            }
+        });
+    </script> -->
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get all input elements
+            const inputs = document.querySelectorAll('.input');
+
+            // Function to check and update label position
+            function updateLabel(input) {
+                if (input.value.trim() !== '') {
+                    input.classList.add('filled');
+                } else {
+                    input.classList.remove('filled');
+                }
+            }
+
+            // Add event listeners to all inputs
+            inputs.forEach(input => {
+                // Check on page load
+                updateLabel(input);
+
+                // Check on input
+                input.addEventListener('input', function () {
+                    updateLabel(this);
+                });
+
+                // Check on blur (when leaving the field)
+                input.addEventListener('blur', function () {
+                    updateLabel(this);
+                });
+            });
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('regForm');
+
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                if (validateForm()) {
+                    alert('Form submitted successfully!');
+                    form.reset();
+                }
+            });
+
+            function validateForm() {
+                let isValid = true;
+                resetErrors();
+
+                // Validate First Name
+                const name = document.getElementById('name').value.trim();
+                if (name === '') {
+                    showError('name', 'First name is required');
+                    isValid = false;
+                } else if (/\d/.test(name)) {
+                    showError('name', 'Name cannot contain numbers');
+                    isValid = false;
+                }
+
+                // Validate Last Name
+                const lastName = document.getElementById('lastName').value.trim();
+                if (lastName === '') {
+                    showError('lastName', 'Last name is required');
+                    isValid = false;
+                } else if (/\d/.test(lastName)) {
+                    showError('lastName', 'Last name cannot contain numbers');
+                    isValid = false;
+                }
+
+                // Validate Email
+                const email = document.getElementById('email').value.trim();
+                if (email === '') {
+                    showError('email', 'Email is required');
+                    isValid = false;
+                } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                    showError('email', 'Please enter a valid email');
+                    isValid = false;
+                }
+
+                // Validate Mobile
+                const mobile = document.getElementById('mobile').value.trim();
+                if (mobile === '') {
+                    showError('mobile', 'Mobile number is required');
+                    isValid = false;
+                } else if (!/^[0-9]{10,15}$/.test(mobile)) {
+                    showError('mobile', 'Please enter 10-15 digits');
+                    isValid = false;
+                }
+
+                // Validate Message
+                const message = document.getElementById('message').value.trim();
+                if (message === '') {
+                    showError('message', 'Message is required');
+                    isValid = false;
+                }
+
+                return isValid;
+            }
+
+            function showError(fieldId, message) {
+                const field = document.getElementById(fieldId);
+                const inputGroup = field.closest('.input-group');
+                const errorElement = document.getElementById(`${fieldId}-error`);
+
+                inputGroup.classList.add('error');
+                errorElement.textContent = message;
+                errorElement.classList.add('show');
+            }
+
+            function resetErrors() {
+                const errorMessages = document.querySelectorAll('.error-message');
+                errorMessages.forEach(el => {
+                    el.textContent = '';
+                    el.classList.remove('show');
+                });
+
+                const inputGroups = document.querySelectorAll('.input-group');
+                inputGroups.forEach(group => group.classList.remove('error'));
+            }
+
+            // Add real-time validation if needed
+            const inputs = form.querySelectorAll('.input');
+            inputs.forEach(input => {
+                input.addEventListener('input', function () {
+                    const inputGroup = this.closest('.input-group');
+                    inputGroup.classList.remove('error');
+                    document.getElementById(`${this.id}-error`).classList.remove('show');
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
