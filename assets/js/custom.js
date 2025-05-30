@@ -15,7 +15,7 @@ lenis.on('scroll', (e) => {
 lenis.on('scroll', ScrollTrigger.update)
 
 gsap.ticker.add((time)=>{
-  lenis.raf(time * 500)
+  lenis.raf(time * 800)
 })
 gsap.ticker.lagSmoothing(0)
 
@@ -38,6 +38,30 @@ function toggleTopButton() {
         document.getElementById('back-to-up').classList.add('d-none');
     }
 }
+
+
+
+// loader
+
+
+  // Add this at the beginning of your script
+  document.addEventListener('DOMContentLoaded', function() {
+    const loader = document.querySelector('.loader');
+    
+    // Hide loader after content loads
+    window.addEventListener('load', function() {
+        setTimeout(() => {
+            gsap.to(loader, {
+                opacity: 0,
+                duration: 0.5,
+                onComplete: () => {
+                    loader.style.display = 'none';
+                }
+            });
+        }, 2000); // Adjust time as needed
+    });
+  });
+
 
 
 
