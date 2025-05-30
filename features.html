@@ -20,7 +20,7 @@
 <body>
 
 
-    <nav class="navbar navbar-expand-lg navbar-dark nav-align fixed-top nav-custom">
+     <nav class="navbar navbar-expand-lg navbar-dark nav-align fixed-top nav-custom">
         <div class="container-fluid">
             <a href="index.html"><img src="assets/img/logo.png" alt=""></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -45,23 +45,24 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link active" href="features.html" tabindex="-1" aria-disabled="true">Features</a>
+                        <a class="nav-link " href="features.html" tabindex="-1" aria-disabled="true">Features</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link " href="pricing.html" tabindex="-1" aria-disabled="true">Pricing</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="demo.html" tabindex="-1" aria-disabled="true">Demo</a>
+                        <a class="nav-link active" href="demo.html" tabindex="-1" aria-disabled="true">Demo</a>
                     </li>
                     <li class="nav-item">
-                         <a class="nav-link " href="assets/img/zip/FlowDesQ-1.0.7.exe" download="" tabindex="-1" aria-disabled="true">Download</a>
+                        <a class="nav-link " href="assets/img/zip/FlowDesQ-1.0.7.exe" download="" tabindex="-1"
+                            aria-disabled="true">Download</a>
                     </li>
                 </ul>
                 <div class="nav-btn">
                     <a href="#" class="common-ptn " role="button">
-                        <button class="primary-btn">
-                            Enquire Now
-                        </button>
+                          <button class="primary-btn" data-bs-toggle="modal" data-bs-target="#enquiryModal">
+                        Enquire Now
+                    </button>
                     </a>
 
                 </div>
@@ -323,7 +324,73 @@
             </div>
         </div>
     </section>
+ <div class="modal fade modal-content-custom no-lenis" id="enquiryModal" tabindex="-1" aria-labelledby="enquiryModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered no-lenis">
+            <div class="modal-content ">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="enquiryModalLabel">Enquire Now</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body ">
+                    <div class="banner-form w-100 p-2">
+                        <div class="firm-div mt-0">
+                            <form name="RegForm" id="regForm">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="input-group">
+                                            <input type="text" name="Name" class="input" id="name" placeholder=" ">
+                                            <label class="user-label">First Name</label>
+                                       
+                                        </div>
+                                    </div>
 
+                                    <div class="col-sm-6">
+                                        <div class="input-group">
+                                            <input type="text" name="lastName" class="input" id="lastName"
+                                                placeholder=" ">
+                                            <label class="user-label" for="lastName">Last Name</label>
+                                      
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12">
+                                        <div class="input-group">
+                                            <input type="email" name="email" class="input" id="email" placeholder=" ">
+                                            <label class="user-label" for="email">Email</label>
+                                  
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12">
+                                        <div class="input-group">
+                                            <input type="tel" name="mobile" class="input" id="mobile" placeholder=" ">
+                                            <label class="user-label" for="mobile">Mobile</label>
+                               
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12">
+                                        <div class="input-group">
+                                            <textarea name="message" id="message" class="input"
+                                                placeholder=" "></textarea>
+                                            <label class="user-label" for="message">Enter Message</label>
+                                
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12">
+                                        <div>
+                                            <button type="submit" class="primary-btn">Submit</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <button class="rounded-circle position-fixed bottom-0 end-0 translate-middle d-none border-none bg-none top-btn"
         onclick="scrollToTop()" id="back-to-up">

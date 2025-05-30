@@ -1989,7 +1989,7 @@ color: var(--btn-color);
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	z-index: 9999;
+	z-index: 9999999;
 }
 
 .loader-content {
@@ -2052,6 +2052,21 @@ color: var(--btn-color);
 }
 
 /* loader */
+
+
+
+/* modal style */
+
+  /* Fix for modal padding issue */
+body.modal-open {
+    padding-right: 0 !important;
+    overflow: hidden;
+}
+
+.modal {
+    padding-right: 0 !important;
+}
+
 /* responsive start */
 
 @media screen and (max-width:1400px) {

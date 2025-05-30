@@ -115,102 +115,246 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
 
-// validation code
-        document.addEventListener('DOMContentLoaded', function () {
-            const form = document.getElementById('regForm');
+// // validation code
+//         document.addEventListener('DOMContentLoaded', function () {
+//             const form = document.getElementById('regForm');
 
-            form.addEventListener('submit', function (e) {
-                e.preventDefault();
-                if (validateForm()) {
-                    alert('Form submitted successfully!');
-                    form.reset();
+//             form.addEventListener('submit', function (e) {
+//                 e.preventDefault();
+//                 if (validateForm()) {
+//                     alert('Form submitted successfully!');
+//                     form.reset();
+//                 }
+//             });
+
+//             function validateForm() {
+//                 let isValid = true;
+//                 resetErrors();
+
+//                 // Validate First Name
+//                 const name = document.getElementById('name').value.trim();
+//                 if (name === '') {
+//                     showError('name', 'First name is required');
+//                     isValid = false;
+//                 } else if (/\d/.test(name)) {
+//                     showError('name', 'Name cannot contain numbers');
+//                     isValid = false;
+//                 }
+
+//                 // Validate Last Name
+//                 const lastName = document.getElementById('lastName').value.trim();
+//                 if (lastName === '') {
+//                     showError('lastName', 'Last name is required');
+//                     isValid = false;
+//                 } else if (/\d/.test(lastName)) {
+//                     showError('lastName', 'Last name cannot contain numbers');
+//                     isValid = false;
+//                 }
+
+//                 // Validate Email
+//                 const email = document.getElementById('email').value.trim();
+//                 if (email === '') {
+//                     showError('email', 'Email is required');
+//                     isValid = false;
+//                 } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+//                     showError('email', 'Please enter a valid email');
+//                     isValid = false;
+//                 }
+
+//                 // Validate Mobile
+//                 const mobile = document.getElementById('mobile').value.trim();
+//                 if (mobile === '') {
+//                     showError('mobile', 'Mobile number is required');
+//                     isValid = false;
+//                 } else if (!/^[0-9]{10,15}$/.test(mobile)) {
+//                     showError('mobile', 'Please enter 10-15 digits');
+//                     isValid = false;
+//                 }
+
+//                 // Validate Message
+//                 const message = document.getElementById('message').value.trim();
+//                 if (message === '') {
+//                     showError('message', 'Message is required');
+//                     isValid = false;
+//                 }
+
+//                 return isValid;
+//             }
+
+//             function showError(fieldId, message) {
+//                 const field = document.getElementById(fieldId);
+//                 const inputGroup = field.closest('.input-group');
+//                 const errorElement = document.getElementById(`${fieldId}-error`);
+
+//                 inputGroup.classList.add('error');
+//                 errorElement.textContent = message;
+//                 errorElement.classList.add('show');
+//             }
+
+//             function resetErrors() {
+//                 const errorMessages = document.querySelectorAll('.error-message');
+//                 errorMessages.forEach(el => {
+//                     el.textContent = '';
+//                     el.classList.remove('show');
+//                 });
+
+//                 const inputGroups = document.querySelectorAll('.input-group');
+//                 inputGroups.forEach(group => group.classList.remove('error'));
+//             }
+
+//             // Add real-time validation if needed
+//             const inputs = form.querySelectorAll('.input');
+//             inputs.forEach(input => {
+//                 input.addEventListener('input', function () {
+//                     const inputGroup = this.closest('.input-group');
+//                     inputGroup.classList.remove('error');
+//                     document.getElementById(`${this.id}-error`).classList.remove('show');
+//                 });
+//             });
+//         });
+
+//         // validation code
+
+        // Initialize Bootstrap modal
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('regForm');
+
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (validateForm()) {
+            resetErrors(); // Clear errors before submission
+            alert('Form submitted successfully!');
+            form.reset();
+        }
+    });
+
+    function validateForm() {
+        let isValid = true;
+        resetErrors();
+
+        // Validate First Name
+        const name = document.getElementById('name').value.trim();
+        if (name === '') {
+            showError('name', 'First name is required');
+            isValid = false;
+        } else if (/\d/.test(name)) {
+            showError('name', 'Name cannot contain numbers');
+            isValid = false;
+        }
+
+        // Validate Last Name
+        const lastName = document.getElementById('lastName').value.trim();
+        if (lastName === '') {
+            showError('lastName', 'Last name is required');
+            isValid = false;
+        } else if (/\d/.test(lastName)) {
+            showError('lastName', 'Last name cannot contain numbers');
+            isValid = false;
+        }
+
+        // Validate Email
+        const email = document.getElementById('email').value.trim();
+        if (email === '') {
+            showError('email', 'Email is required');
+            isValid = false;
+        } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            showError('email', 'Please enter a valid email');
+            isValid = false;
+        }
+
+        // Validate Mobile
+        const mobile = document.getElementById('mobile').value.trim();
+        if (mobile === '') {
+            showError('mobile', 'Mobile number is required');
+            isValid = false;
+        } else if (!/^[0-9]{10,15}$/.test(mobile)) {
+            showError('mobile', 'Please enter 10-15 digits');
+            isValid = false;
+        }
+
+        // Validate Message
+        const message = document.getElementById('message').value.trim();
+        if (message === '') {
+            showError('message', 'Message is required');
+            isValid = false;
+        }
+
+        return isValid;
+    }
+
+    function showError(fieldId, message) {
+        const field = document.getElementById(fieldId);
+        const inputGroup = field.closest('.input-group');
+        const errorElement = document.getElementById(`${fieldId}-error`);
+
+        inputGroup.classList.add('error');
+        errorElement.textContent = message;
+        errorElement.classList.add('show');
+    }
+
+    function resetErrors() {
+        const errorMessages = document.querySelectorAll('.error-message');
+        errorMessages.forEach(el => {
+            el.textContent = '';
+            el.classList.remove('show');
+        });
+
+        const inputGroups = document.querySelectorAll('.input-group');
+        inputGroups.forEach(group => group.classList.remove('error'));
+    }
+
+    // Add real-time validation if needed
+    const inputs = form.querySelectorAll('.input');
+    inputs.forEach(input => {
+        input.addEventListener('input', function () {
+            const inputGroup = this.closest('.input-group');
+            inputGroup.classList.remove('error');
+            document.getElementById(`${this.id}-error`).classList.remove('show');
+        });
+    });
+
+
+    
+});
+
+
+enquiryModal.addEventListener('hidden.bs.modal', function() {
+    document.getElementById('regForm').reset();
+    resetFormValidation();
+});
+
+
+
+// form label effect
+
+     document.addEventListener('DOMContentLoaded', function () {
+            // Get all input elements
+            const inputs = document.querySelectorAll('.input');
+
+            // Function to check and update label position
+            function updateLabel(input) {
+                if (input.value.trim() !== '') {
+                    input.classList.add('filled');
+                } else {
+                    input.classList.remove('filled');
                 }
-            });
-
-            function validateForm() {
-                let isValid = true;
-                resetErrors();
-
-                // Validate First Name
-                const name = document.getElementById('name').value.trim();
-                if (name === '') {
-                    showError('name', 'First name is required');
-                    isValid = false;
-                } else if (/\d/.test(name)) {
-                    showError('name', 'Name cannot contain numbers');
-                    isValid = false;
-                }
-
-                // Validate Last Name
-                const lastName = document.getElementById('lastName').value.trim();
-                if (lastName === '') {
-                    showError('lastName', 'Last name is required');
-                    isValid = false;
-                } else if (/\d/.test(lastName)) {
-                    showError('lastName', 'Last name cannot contain numbers');
-                    isValid = false;
-                }
-
-                // Validate Email
-                const email = document.getElementById('email').value.trim();
-                if (email === '') {
-                    showError('email', 'Email is required');
-                    isValid = false;
-                } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-                    showError('email', 'Please enter a valid email');
-                    isValid = false;
-                }
-
-                // Validate Mobile
-                const mobile = document.getElementById('mobile').value.trim();
-                if (mobile === '') {
-                    showError('mobile', 'Mobile number is required');
-                    isValid = false;
-                } else if (!/^[0-9]{10,15}$/.test(mobile)) {
-                    showError('mobile', 'Please enter 10-15 digits');
-                    isValid = false;
-                }
-
-                // Validate Message
-                const message = document.getElementById('message').value.trim();
-                if (message === '') {
-                    showError('message', 'Message is required');
-                    isValid = false;
-                }
-
-                return isValid;
             }
 
-            function showError(fieldId, message) {
-                const field = document.getElementById(fieldId);
-                const inputGroup = field.closest('.input-group');
-                const errorElement = document.getElementById(`${fieldId}-error`);
+            // Add event listeners to all inputs
+            inputs.forEach(input => {
+                // Check on page load
+                updateLabel(input);
 
-                inputGroup.classList.add('error');
-                errorElement.textContent = message;
-                errorElement.classList.add('show');
-            }
-
-            function resetErrors() {
-                const errorMessages = document.querySelectorAll('.error-message');
-                errorMessages.forEach(el => {
-                    el.textContent = '';
-                    el.classList.remove('show');
+                // Check on input
+                input.addEventListener('input', function () {
+                    updateLabel(this);
                 });
 
-                const inputGroups = document.querySelectorAll('.input-group');
-                inputGroups.forEach(group => group.classList.remove('error'));
-            }
-
-            // Add real-time validation if needed
-            const inputs = form.querySelectorAll('.input');
-            inputs.forEach(input => {
-                input.addEventListener('input', function () {
-                    const inputGroup = this.closest('.input-group');
-                    inputGroup.classList.remove('error');
-                    document.getElementById(`${this.id}-error`).classList.remove('show');
+                // Check on blur (when leaving the field)
+                input.addEventListener('blur', function () {
+                    updateLabel(this);
                 });
             });
         });
-
-        // validation code
